@@ -29,7 +29,7 @@ src/
   clean_dmrc_data.py
   dmrc_fare_prediction.py
 requirements.txt
-DMRC_Fare_Prediction_Project_Guide.md
+README.md
 ```
 
 The raw file is kept unchanged. The cleaning script creates the cleaned file;

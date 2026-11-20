@@ -1,0 +1,7 @@
+Model,Features,MAE,RMSE,R2,MAPE_%,CV_R2_mean
+Baseline (mean fare),0,10.5893,12.6891,-0.0014,34.8741,
+M1: Distance only,1,4.9516,6.7651,0.7154,15.3786,0.7453
+"M2: + Interchange, Airport, Peak",4,2.226,2.692,0.9549,6.8701,0.9551
+M3: + Ticket type,6,1.4268,1.7682,0.9806,4.3815,0.9802
+M4: + Distance^2 & interactions,9,1.4264,1.7672,0.9806,4.3814,0.9802
+M5: + Corridor line,21,1.4243,1.767,0.9806,4.3764,0.9802

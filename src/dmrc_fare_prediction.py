@@ -108,7 +108,8 @@ df["Estimated_Fare"] = df.groupby(group_cols, observed=True)["Ticket_Fare_INR"].
 
 # how far is our estimate from the real fare
 df["Difference"] = (df["Ticket_Fare_INR"] - df["Estimated_Fare"]).round(2)
-print("\nAverage difference between real and estimated fare:",
+# This is an in-sample difference, not a test of estimates for new trips.
+print("\nAverage difference on the trips used to build the estimates:",
       np.abs(df["Difference"]).mean().round(2), "rupees")
 
 # comparing with a very basic estimate (one single rate per km for everyone)

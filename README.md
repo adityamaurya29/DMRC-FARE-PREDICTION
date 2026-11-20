@@ -4,6 +4,13 @@ A beginner-friendly analysis of Delhi Metro trip and fare data. The current
 script uses only **NumPy** and **pandas**; it does not use a machine-learning
 library.
 
+## Project author
+
+- **Name:** Adirya Kumar Maurya
+- **Program:** B.TECH 1st year CSE 2
+- **Admission number:** 2026B01010410
+- **Email:** [aditya26b01010410@abes.ac.in](mailto:aditya26b01010410@abes.ac.in)
+
 ## What the script does
 
 The script reads the trip data and:

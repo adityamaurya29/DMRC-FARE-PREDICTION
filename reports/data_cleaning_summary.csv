@@ -1,0 +1,46 @@
+Measure,Value
+Source file,data\raw\dmrc_fare_prediction_raw.csv
+Source rows,12450
+Source columns,10
+Exact duplicate source rows,1258
+Repeated Trip_ID rows in source,6450
+Rows with invalid indicator flags,2046
+Rows removed for missing or invalid values,5200
+Valid rows before Trip_ID deduplication,7250
+Repeated valid Trip_ID rows removed,1250
+Cleaned rows,6000
+Missing values in Trip_ID,0
+Missing values in Origin_Station,0
+Missing values in Destination_Station,0
+Missing values in Corridor_Line,0
+Missing values in Travel_Distance_km,839
+Missing values in Interchange_Count,863
+Missing values in Is_Airport_Express,809
+Missing values in Is_Peak_Hour,831
+Missing values in Ticket_Type,0
+Missing values in Ticket_Fare_INR,844
+Missing percentage in Trip_ID,0.0
+Missing percentage in Origin_Station,0.0
+Missing percentage in Destination_Station,0.0
+Missing percentage in Corridor_Line,0.0
+Missing percentage in Travel_Distance_km,6.74
+Missing percentage in Interchange_Count,6.93
+Missing percentage in Is_Airport_Express,6.5
+Missing percentage in Is_Peak_Hour,6.67
+Missing percentage in Ticket_Type,0.0
+Missing percentage in Ticket_Fare_INR,6.78
+Values trimmed in Trip_ID,0
+Values trimmed in Origin_Station,436
+Values trimmed in Destination_Station,441
+Values trimmed in Corridor_Line,422
+Values trimmed in Travel_Distance_km,554
+Values trimmed in Interchange_Count,505
+Values trimmed in Is_Airport_Express,544
+Values trimmed in Is_Peak_Hour,568
+Values trimmed in Ticket_Type,437
+Values trimmed in Ticket_Fare_INR,551
+Non-numeric values in Travel_Distance_km,207
+Non-numeric values in Interchange_Count,218
+Non-numeric values in Is_Airport_Express,212
+Non-numeric values in Is_Peak_Hour,194
+Non-numeric values in Ticket_Fare_INR,183

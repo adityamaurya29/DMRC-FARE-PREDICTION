@@ -4,7 +4,7 @@ from pathlib import Path
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-DATA_PATH = PROJECT_ROOT / "data" / "dmrc_fare_prediction_cleaned.csv"
+DATA_PATH = PROJECT_ROOT / "data" / "cleaned" / "dmrc_fare_prediction_cleaned.csv"
 PROCESSED_DIR = PROJECT_ROOT / "data" / "processed"
 REPORTS_DIR = PROJECT_ROOT / "reports"
 

@@ -1,18 +1,12 @@
+# DMRC Fare Prediction project
+# Using only numpy and pandas
+# (keep the csv file in the same folder as this file)
+
 import numpy as np
 import pandas as pd
-from pathlib import Path
-
-
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-DATA_PATH = PROJECT_ROOT / "data" / "cleaned" / "dmrc_fare_prediction_cleaned.csv"
-PROCESSED_DIR = PROJECT_ROOT / "data" / "processed"
-REPORTS_DIR = PROJECT_ROOT / "reports"
-
-PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
-REPORTS_DIR.mkdir(parents=True, exist_ok=True)
 
 # ---------- 1. reading the data ----------
-df = pd.read_csv(DATA_PATH)
+df = pd.read_csv("dmrc_fare_cleaned.csv")
 
 print("First 5 rows")
 print(df.head())
@@ -108,8 +102,7 @@ df["Estimated_Fare"] = df.groupby(group_cols, observed=True)["Ticket_Fare_INR"].
 
 # how far is our estimate from the real fare
 df["Difference"] = (df["Ticket_Fare_INR"] - df["Estimated_Fare"]).round(2)
-# This is an in-sample difference, not a test of estimates for new trips.
-print("\nAverage difference on the trips used to build the estimates:",
+print("\nAverage difference between real and estimated fare:",
       np.abs(df["Difference"]).mean().round(2), "rupees")
 
 # comparing with a very basic estimate (one single rate per km for everyone)
@@ -152,9 +145,6 @@ print("3. Peak hour trips and Airport Express trips cost more.")
 print("4. Each interchange adds to the fare.")
 
 # ---------- 9. saving the results ----------
-results_path = PROCESSED_DIR / "dmrc_fare_results.csv"
-line_summary_path = REPORTS_DIR / "line_summary.csv"
-df.to_csv(results_path, index=False)
-line_summary.round(2).to_csv(line_summary_path)
-print(f"\nSaved {results_path}")
-print(f"Saved {line_summary_path}")
+df.to_csv("dmrc_fare_results.csv", index=False)
+line_summary.round(2).to_csv("line_summary.csv")
+print("\nSaved dmrc_fare_results.csv and line_summary.csv")
